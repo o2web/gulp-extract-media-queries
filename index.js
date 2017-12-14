@@ -18,7 +18,7 @@ module.exports = function() {
 			var poop = file.clone({
 				contents: false
 			});
-			var name = cleanUpString(key);
+			var name = cleanUpString(key.replace('.','_'));
 			var contents = stringify(stylesheets[key]);
 			poop.contents = new Buffer(contents);
 			if (name) {
